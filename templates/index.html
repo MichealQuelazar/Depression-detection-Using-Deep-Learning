@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Depression Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="form-card">
+    <h1>Depression Detection</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file" id="fileInput" class="file-input" required />
+      <label for="fileInput" class="file-label">Choose Image</label>
+
+      <img id="preview" class="preview" alt="Preview" />
+
+      <button type="submit" class="submit-btn">Predict</button>
+    </form>
+
+    {% if result %}
+      <div class="result {{ 'positive' if result == 'Not Depressed' else 'negative' }}">
+        {{ result }}
+      </div>
+    {% endif %}
+  </div>
+
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    const preview = document.getElementById("preview");
+    fileInput.addEventListener("change", e => {
+      const file = e.target.files[0];
+      preview.style.display = file ? "block" : "none";
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = event => preview.src = event.target.result;
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>
