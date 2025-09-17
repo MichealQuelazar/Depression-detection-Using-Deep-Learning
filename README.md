@@ -2,7 +2,11 @@
 **Mini Project Work for BTAM1311 (Deep Learning)**  
 
 This project applies **Convolutional Neural Networks (CNNs)** to detect signs of depression from facial expression images.  
-It includes dataset preparation, model training, evaluation, a project report, and a Flask web application for deployment.  
+It includes dataset preparation, model training, evaluation, a project report, and a Flask web application for deployment. 
+
+## 🚀 Live Demo
+Check out the project here: [Live Demo](https://sociedu.netlify.app/)
+
 
 ---
 
