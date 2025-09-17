@@ -1,6 +1,7 @@
 import os
 import shutil
 import kagglehub
+import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
@@ -86,3 +87,22 @@ history = model.fit(train_generator, epochs=epochs, validation_data=val_generato
 # Step 7: Save model
 model.save("depression_model.h5")
 print("Model saved as depression_model.h5")
+
+
+
+model = tf.keras.models.load_model("depression_model.h5", compile=False)
+
+
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+
+# Optional: optimize for size and speed
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+
+# Convert the model
+tflite_model = converter.convert()
+
+# Save the TFLite model
+with open("depression_model.tflite", "wb") as f:
+    f.write(tflite_model)
+
+print("Model successfully converted to depression_model.tflite")
