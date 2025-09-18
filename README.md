@@ -5,7 +5,7 @@ This project applies **Convolutional Neural Networks (CNNs)** to detect signs of
 It includes dataset preparation, model training, evaluation, a project report, and a Flask web application for deployment. 
 
 ## 🚀 Live Demo
-Check out the project here: [Live Demo](https://sociedu.netlify.app/)
+Check out the project here: [Live Demo](https://depression-detection-using-deep-learning.onrender.com/)
 
 
 ---
