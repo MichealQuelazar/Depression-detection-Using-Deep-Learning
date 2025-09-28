@@ -1,6 +1,8 @@
 # Depression-detection-Using-Deep-Learning  
 **Mini Project Work for BTAM1311 (Deep Learning)**  
 
+<img width="1817" height="924" alt="Screenshot 2025-09-17 213625" src="https://github.com/user-attachments/assets/70137bc5-05f7-4ec2-ae56-bcadaa07bec4" />
+
 This project applies **Convolutional Neural Networks (CNNs)** to detect signs of depression from facial expression images.  
 It includes dataset preparation, model training, evaluation, a project report, and a Flask web application for deployment. 
 
@@ -48,11 +50,17 @@ Depression-detection-Using-Deep-Learning/
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/Depression-detection-Using-Deep-Learning.git
+```
+### Navigate to cloned repoistory
+```bash
 cd Depression-detection-Using-Deep-Learning
 ```
  ### Create a virtual environment
  ```bash
 python -m venv venv
+```
+ ### Activate your virtual environment
+ ```
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
 ```
@@ -66,6 +74,8 @@ python app.py
 ```
 
 ### Download the original dataset used from Kaggle: 
-(https://www.kaggle.com/datasets/khairunneesa/depression-dataset-on-facial-ecpression-images)
+```bash
+https://www.kaggle.com/datasets/khairunneesa/depression-dataset-on-facial-ecpression-images
+```
 
  
